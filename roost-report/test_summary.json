@@ -1,0 +1,181 @@
+{
+  "event_type": "retrigger",
+  "roostai_jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtYW4udHJpcGF0aGkiLCJpYXQiOjE3NTIyMDQ5NTAsImV4cCI6MTc1MjIxNTc1MH0.6rpaCpMYPIXh7vjFFErNDgHwSFGzH3rUfcN97KSSWa8",
+  "source_git_info": {
+    "repo": "spring-ai",
+    "repo_id": "955712261",
+    "owner_name": "bhavya1099",
+    "branch": "main",
+    "git_path": "/",
+    "token": "351b9b8b163517f956cd17dfb5ff95b1f62b6497aa27f89a3fd1f1c1f4df02469348fc133d29f95c56ceeebc2831a0efa510f58b90726b7706c56085da76d38d",
+    "project_name": "",
+    "project_id": "",
+    "user_ip": "",
+    "application_entrypoint": "",
+    "host_type": "cloud",
+    "git_type": "",
+    "enable_secret_scanning_bypass": true
+  },
+  "destination_git_info": {
+    "repo": "spring-ai",
+    "repo_id": "955712261",
+    "owner_name": "bhavya1099",
+    "branch": "main",
+    "git_path": "",
+    "token": "351b9b8b163517f956cd17dfb5ff95b1f62b6497aa27f89a3fd1f1c1f4df02469348fc133d29f95c56ceeebc2831a0efa510f58b90726b7706c56085da76d38d",
+    "project_name": "",
+    "project_id": "",
+    "user_ip": "",
+    "application_entrypoint": "",
+    "host_type": "cloud",
+    "git_type": "",
+    "enable_secret_scanning_bypass": false
+  },
+  "jira_info": {
+    "jira_email": "",
+    "jira_password": "",
+    "jira_hostname": "",
+    "jira_id": ""
+  },
+  "model_type": "openai",
+  "trigger_id": "80ee687d-515d-4bc5-b800-9ecb69eaa8f8",
+  "gpt_info": {
+    "open_api_key": "",
+    "model_name": "gpt-4o",
+    "openai_base_url": "https://api.openai.com/v1/"
+  },
+  "claude_info": { "claude_ai_access_token": "", "claude_ai_model_name": "" },
+  "dbrx_info": {
+    "dbrx_model_endpoint": "",
+    "dbrx_auth_token": "",
+    "dbrx_model_name": ""
+  },
+  "awsBedrock_info": {
+    "aws_bedrock_model_id": "",
+    "aws_bedrock_model_region": "",
+    "aws_creds": {
+      "aws_access_key_id": "",
+      "aws_secret_access_key": "",
+      "aws_session_token": ""
+    },
+    "knowledge_base_id": ""
+  },
+  "vertex_info": {
+    "vertex_project_id": "",
+    "vertex_location": "",
+    "vertex_bearer_token": "",
+    "model_name": "",
+    "vertex_fine_tune": false,
+    "vertex_credential_type": "token",
+    "vertex_service_account_key": "{}"
+  },
+  "open_source_info": { "model_ip": "", "model_name": "" },
+  "azure_model_info": {
+    "azure_openai_key": "",
+    "azure_deployment_name": "",
+    "azure_endpoint": "",
+    "azure_inference_ai": false
+  },
+  "test_name": "amanProjectPath10thJuly",
+  "single_test_file": false,
+  "ai_temperature": 0.6,
+  "programming_language": "java",
+  "java_build_tool": "maven",
+  "packages": "*",
+  "iteration": "1",
+  "app_id": "zbio",
+  "test_type": "unit",
+  "telemetry": true,
+  "number_of_files": "",
+  "git_type": "github",
+  "timeout": 1,
+  "git_ops": true,
+  "board_type": "none",
+  "azure_info": {
+    "azure_org": "",
+    "azure_project": "",
+    "azure_token": "",
+    "azure_work_item_id": ""
+  },
+  "log_stash_info": {
+    "log_stash_use_api_key": false,
+    "log_stash_api_key": "",
+    "log_stash_url": "",
+    "log_stash_user_name": "",
+    "log_stash_token": "",
+    "log_stash_type": "none",
+    "log_stash_data": ""
+  },
+  "improve_data": [],
+  "license_key": "7c45cc65-a375-4808-b009-c43a97a538de",
+  "git_details_equality": true,
+  "dependency_versions": {
+    "java_version": "21",
+    "maven_version": "3.8.6",
+    "go_version": "1.24.0",
+    "python_version": "",
+    "dotnet_version": "",
+    "node_version": "",
+    "gradle_version": "8.6",
+    "karate_version": "1.5.1"
+  },
+  "api_test_spec": {
+    "type": "swagger",
+    "source_type": "file",
+    "file_content": [],
+    "url": [""],
+    "gitpath": [""],
+    "data": null,
+    "http_verbs": ["get", "post", "put", "patch", "delete"],
+    "api_filter": ".*"
+  },
+  "proto_test_spec": {
+    "data": null,
+    "source_type": "file",
+    "url": [""],
+    "file_content": [],
+    "gitpath": [""],
+    "repo": "",
+    "repo_id": "",
+    "branch": "",
+    "project_name": "",
+    "project_id": ""
+  },
+  "uploaded_screenshots": {
+    "source_type": "",
+    "file_content": null,
+    "url": [""],
+    "gitpath": [""],
+    "data": null
+  },
+  "behavioral_test_spec": {
+    "type": "gherkin",
+    "source_type": "file",
+    "file_content": [],
+    "url": [""],
+    "gitpath": [""],
+    "data": null,
+    "http_verbs": null,
+    "api_filter": ""
+  },
+  "max_depth": -1,
+  "test_framework": "JUnit5",
+  "roost_user_input": "",
+  "roost_user_input_file": [],
+  "roost_user_input_type": "text",
+  "env_config": [],
+  "use_assistant": false,
+  "functions_to_test": "",
+  "create_api_spec": false,
+  "verify_test": true,
+  "user_language": "english",
+  "vulnerability_gen": false,
+  "consider_existing_test": false,
+  "custom_tags": [""],
+  "user_scenarios": "",
+  "contact_email": "",
+  "additional_support_message": "",
+  "ticket_files": [],
+  "ticket_input_type": "id",
+  "api_test_server_config": "[]"
+}

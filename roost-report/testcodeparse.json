@@ -1,0 +1,235 @@
+{
+  "org.springframework.ai.converter" : {
+    "/var/tmp/Roost/RoostGPT/amanProjectPath10thJuly/80ee687d-515d-4bc5-b800-9ecb69eaa8f8/source/spring-ai/src/test/java/org/springframework/ai/converter/MapOutputConverterConvertTest.java" : {
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "java.nio.charset.StandardCharsets"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.HashMap"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.Map"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.junit.jupiter.api.Assertions"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.junit.jupiter.api.Tag"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.junit.jupiter.api.Test"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.lang.NonNull"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.messaging.Message"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.messaging.converter.MappingJackson2MessageConverter"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.messaging.support.MessageBuilder"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.junit.jupiter.api"
+      } ],
+      "classes" : [ {
+        "name" : "MapOutputConverterConvertTest",
+        "comments" : null,
+        "annotations" : [ ],
+        "methods" : [ {
+          "name" : "convertJsonStringWithCorrectFormat",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "put",
+            "arguments" : [ "\"key\"", "\"value\"" ],
+            "body" : ""
+          }, {
+            "name" : "convert",
+            "arguments" : [ "jsonString" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "expectedMap", "converter", "jsonString", "Assertions", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"valid\")\npublic void convertJsonStringWithCorrectFormat() {\n    String jsonString = \"json{\\\"key\\\":\\\"value\\\"}\\\"\\\"\\\"\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    expectedMap.put(\"key\", \"value\");\n    Map<String, Object> result = converter.convert(jsonString);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        }, {
+          "name" : "convertNonJsonString",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "convert",
+            "arguments" : [ "nonJsonString" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "converter", "nonJsonString", "Assertions", "expectedMap", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"invalid\")\npublic void convertNonJsonString() {\n    String nonJsonString = \"This is not a JSON string\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    Map<String, Object> result = converter.convert(nonJsonString);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        }, {
+          "name" : "convertEmptyString",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "convert",
+            "arguments" : [ "emptyString" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "converter", "emptyString", "Assertions", "expectedMap", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"boundary\")\npublic void convertEmptyString() {\n    String emptyString = \"\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    Map<String, Object> result = converter.convert(emptyString);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        }, {
+          "name" : "convertNullString",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "assertThrows",
+            "arguments" : [ "NullPointerException.class", "() -> {\n    converter.convert(null);\n}" ],
+            "body" : ""
+          }, {
+            "name" : "convert",
+            "arguments" : [ "null" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "Assertions", "converter" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"invalid\")\npublic void convertNullString() {\n    Assertions.assertThrows(NullPointerException.class, () -> {\n        converter.convert(null);\n    });\n}"
+        }, {
+          "name" : "convertStringWithIncorrectJsonFormat",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "convert",
+            "arguments" : [ "incorrectJsonString" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "converter", "incorrectJsonString", "Assertions", "expectedMap", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"invalid\")\npublic void convertStringWithIncorrectJsonFormat() {\n    String incorrectJsonString = \"json{\\\"key\\\":\\\"value\\\"}\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    Map<String, Object> result = converter.convert(incorrectJsonString);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        }, {
+          "name" : "convertStringWithOnlyJsonPrefix",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "convert",
+            "arguments" : [ "jsonPrefixString" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "converter", "jsonPrefixString", "Assertions", "expectedMap", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"boundary\")\npublic void convertStringWithOnlyJsonPrefix() {\n    String jsonPrefixString = \"json\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    Map<String, Object> result = converter.convert(jsonPrefixString);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        }, {
+          "name" : "convertStringWithOnlyJsonSuffix",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "convert",
+            "arguments" : [ "jsonSuffixString" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "converter", "jsonSuffixString", "Assertions", "expectedMap", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"boundary\")\npublic void convertStringWithOnlyJsonSuffix() {\n    String jsonSuffixString = \"\\\"\\\"\\\"\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    Map<String, Object> result = converter.convert(jsonSuffixString);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        }, {
+          "name" : "convertStringWithSpecialCharacters",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "put",
+            "arguments" : [ "\"key\"", "\"value!@#$%^&*()\"" ],
+            "body" : ""
+          }, {
+            "name" : "convert",
+            "arguments" : [ "specialCharString" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "expectedMap", "converter", "specialCharString", "Assertions", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"valid\")\npublic void convertStringWithSpecialCharacters() {\n    String specialCharString = \"json{\\\"key\\\":\\\"value!@#$%^&*()\\\"}\\\"\\\"\\\"\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    expectedMap.put(\"key\", \"value!@#$%^&*()\");\n    Map<String, Object> result = converter.convert(specialCharString);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        }, {
+          "name" : "convertStringWithUtf8Characters",
+          "arguments" : [ ],
+          "accessModifier" : "public",
+          "methodsCalled" : [ {
+            "name" : "put",
+            "arguments" : [ "\"key\"", "\"valueñáéíóú\"" ],
+            "body" : ""
+          }, {
+            "name" : "convert",
+            "arguments" : [ "utf8String" ],
+            "body" : ""
+          }, {
+            "name" : "assertEquals",
+            "arguments" : [ "expectedMap", "result" ],
+            "body" : ""
+          } ],
+          "usedEntities" : [ "expectedMap", "converter", "utf8String", "Assertions", "result" ],
+          "annotations" : [ "Test", "Tag" ],
+          "returnType" : "void",
+          "comments" : null,
+          "methodDefinition" : "@Test\n@Tag(\"valid\")\npublic void convertStringWithUtf8Characters() {\n    String utf8String = \"json{\\\"key\\\":\\\"valueñáéíóú\\\"}\\\"\\\"\\\"\";\n    Map<String, Object> expectedMap = new HashMap<>();\n    expectedMap.put(\"key\", \"valueñáéíóú\");\n    Map<String, Object> result = converter.convert(utf8String);\n    Assertions.assertEquals(expectedMap, result);\n}"
+        } ],
+        "fields" : [ {
+          "name" : "converter",
+          "accessModifier" : "private,final",
+          "value" : "new MapOutputConverter()",
+          "type" : "MapOutputConverter",
+          "comments" : null
+        } ],
+        "constructors" : [ ],
+        "extends" : [ ],
+        "implements" : [ ],
+        "nestedClass" : null,
+        "accessSpecifier" : "public",
+        "records" : [ ]
+      } ],
+      "records" : [ ],
+      "samePackageClasses" : [ ]
+    }
+  }
+}
